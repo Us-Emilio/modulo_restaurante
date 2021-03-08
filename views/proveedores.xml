@@ -1,0 +1,22 @@
+<odoo>
+	<record id="view_tree_prov" model="ir.ui.view">
+		<field name="name">view.tree.prov</field>
+		<field name="model">rest.prov</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name"/>
+				<field name="starus"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="action_view_prov" model="ir.actions.act_window">
+		<field name="name">Proveedores</field>
+		<field name="res_model">rest.prov</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="menu_prov" parent="" action="Restaurante.action_view_prov">
+
+	</menuitem>
+</odoo>
