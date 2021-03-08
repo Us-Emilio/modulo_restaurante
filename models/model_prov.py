@@ -9,4 +9,12 @@ class Prov(models.Model):
         string="Nombre",
         required=True
         )
-    starus = fields.Selection(selection=[("preferente", "Preferente"), ("secundario", "Secundario")])
+    
+    emal = fields.Char(
+        string="Correo electronico",
+        required=True
+        )
+
+    num_prov = fields.Integer(
+        string="Numero de telefono"
+        )
