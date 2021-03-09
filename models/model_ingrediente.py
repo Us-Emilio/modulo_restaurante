@@ -16,15 +16,11 @@ class Ingrediente(models.Model):
         )
 
     unidades = fields.Integer(
-        string="Unidades"
+        string="Unidades",
+        required=True
         )
     
-    cateforia = fields.Selection(
-        string="Categoria",
-        selection=[("pescado", "Pescado"), ("carne", "Carne"), ("fruta", "Fruta"), ("otros", "Otros")]
-        )
-    
-    cateforia = fields.Selection(
+    categoria = fields.Selection(
         string="Categoria",
         selection=[("pescado", "Pescado"), ("carne", "Carne"), ("fruta", "Fruta"), ("otros", "Otros")]
         )

@@ -1,0 +1,24 @@
+<odoo>
+	<record id="view_tree_ingrediente" model="ir.ui.view">
+		<field name="name">view.tree.ingrediente</field>
+		<field name="model">rest.ingrediente</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name"/>
+				<field name="prov"/>
+				<field name="unidades"/>
+                <field name="categoria"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="action_view_ingredientes" model="ir.actions.act_window">
+		<field name="name">Ingredientes</field>
+		<field name="res_model">rest.ingrediente</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="model_ingrediente" parent="" action="Restaurante.action_view_ingredientes">
+
+	</menuitem>
+</odoo>

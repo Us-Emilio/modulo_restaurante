@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rest_prov,rest.prov,model_rest_prov,base.group_system,1,1,1,1
+access_rest_ingrediente,rest.ingrediente,model_rest_ingrediente,base.group_system,1,1,1,1
+access_rest_pedido,rest.pedido,model_rest_pedido,base.group_system,1,1,1,1

@@ -1,0 +1,25 @@
+<odoo>
+	<record id="view_tree_pedido" model="ir.ui.view">
+		<field name="name">view.tree.pedido</field>
+		<field name="model">rest.pedido</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="remitente"/>
+				<field name="ingrediente"/>
+				<field name="cantidad"/>
+                <field name="tipo"/>
+				<field name="estado"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="action_view_pedido" model="ir.actions.act_window">
+		<field name="name">Pedidos</field>
+		<field name="res_model">rest.pedido</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="model_pedido" parent="" action="Restaurante.action_view_pedido">
+
+	</menuitem>
+</odoo>
