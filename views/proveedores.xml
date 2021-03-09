@@ -17,7 +17,7 @@
 		<field name="view_mode">tree,form</field>
 	</record>
 
-	<menuitem id="menu_prov" parent="" action="Restaurante.action_view_prov">
+	<menuitem id="menu_prov" parent="" action="action_view_prov">
 
 	</menuitem>
 </odoo>
