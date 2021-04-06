@@ -10,10 +10,7 @@ class Pedidp(models.Model):
         required=True
         )
     
-    ingrediente = fields.Char(
-        string="Ingrediente",
-        required=True
-        )
+    ingrediente = fields.Many2many("rest.ingrediente", string="Ingrediente")
 
     cantidad = fields.Integer(
         string="Cantidad"
@@ -21,7 +18,7 @@ class Pedidp(models.Model):
     
     tipo = fields.Selection(
         string="Unidad",
-        selection=[("kg", "Kg"),("unidades", "Unidades")]
+        selection=[("g", "g"),("kg", "Kg"),("unidades", "Unidades")]
         )
 
     estado = fields.Selection(
