@@ -10,10 +10,7 @@ class Ingrediente(models.Model):
         required=True
         )
     
-    prov = fields.Char(
-        string="Proveedor",
-        required=True
-        )
+    prov = fields.many2one("rest.prov", string="Proveedor")
 
     unidades = fields.Integer(
         string="Unidades",
