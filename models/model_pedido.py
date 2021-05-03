@@ -10,15 +10,24 @@ class Pedidp(models.Model):
         required=True
         )
     
-    ingrediente = fields.Many2many("rest.ingrediente", string="Ingrediente")
+    ingrediente = fields.Many2one("rest.ingrediente", 
+        string="Ingrediente",
+        required=True)
 
-    cantidad = fields.Integer(
-        string="Cantidad"
+    cantidad = fields.Float(
+        string="Cantidad",
+        required=True
         )
     
     tipo = fields.Selection(
         string="Unidad",
-        selection=[("g", "g"),("kg", "Kg"),("unidades", "Unidades")]
+        selection=[("g", "g"),("kg", "Kg"),("unidades", "Unidades")],
+        required=True
+        )
+    
+    fecha = fields.Date(
+        string="Fecha prevista",
+        required=True
         )
 
     estado = fields.Selection(
